@@ -1,0 +1,28 @@
+[gd_resource type="Theme" format=3 uid="uid://cqg8lipwmj6k7"]
+
+[ext_resource type="FontFile" uid="uid://c1le0k25u42gr" path="res://assets/MinimalUI4/OpenSans-Regular.ttf" id="1_6pfpj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i4rym"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7nv8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vf22r"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8d5m"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_0s737"]
+color = Color(0, 0, 0, 0)
+
+[resource]
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 29
+Button/fonts/font = ExtResource("1_6pfpj")
+Button/styles/focus = SubResource("StyleBoxFlat_i4rym")
+Button/styles/hover = SubResource("StyleBoxFlat_h7nv8")
+Button/styles/normal = SubResource("StyleBoxFlat_vf22r")
+Button/styles/pressed = SubResource("StyleBoxFlat_s8d5m")
+HSeparator/styles/separator = SubResource("StyleBoxLine_0s737")

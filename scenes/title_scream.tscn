@@ -1,6 +1,137 @@
 [gd_scene format=3 uid="uid://da0fhv20r3fhk"]
 
 [ext_resource type="Script" uid="uid://da24e78xdxl32" path="res://scripts/title_scream.gd" id="1_fnt1t"]
+[ext_resource type="FontFile" uid="uid://dkb3iscy5xrn7" path="res://assets/fontes/_decterm.ttf" id="2_m5ta4"]
+[ext_resource type="Theme" uid="uid://cqg8lipwmj6k7" path="res://themes/title_scream_butoons.tres" id="2_o6k8f"]
+[ext_resource type="Theme" uid="uid://ct5p3qxoaqymf" path="res://themes/terminal.tres" id="4_h7nv8"]
+[ext_resource type="Theme" uid="uid://dq0mgarwuc0r1" path="res://themes/button_right_base.tres" id="4_i4rym"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o6k8f"]
+font = ExtResource("2_m5ta4")
+font_size = 60
+font_color = Color(0, 1, 0, 1)
+
+[sub_resource type="Animation" id="Animation_m5ta4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("title:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [">_ Command's Terminal "]
+}
+
+[sub_resource type="Animation" id="Animation_o6k8f"]
+resource_name = "titulo"
+length = 0.3
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("title:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [">_ Command's Terminal ", ">  Command's Terminal "]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i4rym"]
+_data = {
+&"RESET": SubResource("Animation_m5ta4"),
+&"titulo": SubResource("Animation_o6k8f")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7nv8"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vf22r"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8d5m"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0s737"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mx0dg"]
+bg_color = Color(1, 0.87058824, 0.12941177, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfgw4"]
+bg_color = Color(1, 0.87058824, 0.12941177, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsiph"]
+bg_color = Color(1, 0.87058824, 0.12941177, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ein6t"]
+bg_color = Color(1, 0.87058824, 0.12941177, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00rp1"]
+bg_color = Color(0, 1, 0, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1fjih"]
+bg_color = Color(0, 1, 0, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtnif"]
+bg_color = Color(0, 1, 0, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7y4kd"]
+bg_color = Color(0, 1, 0, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
 
 [node name="title_scream" type="Control" unique_id=1556282645]
 layout_mode = 3
@@ -10,3 +141,199 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fnt1t")
+metadata/_edit_lock_ = true
+
+[node name="bg" type="Control" parent="." unique_id=929563802]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="bg_borda" type="ColorRect" parent="bg" unique_id=1593497332]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.98234254, 0.9823423, 0.9823424, 1)
+metadata/_edit_lock_ = true
+
+[node name="bg_main" type="ColorRect" parent="bg" unique_id=861352483]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 22.0
+offset_right = -7.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4627451, 0.4627451, 0.4627451, 1)
+metadata/_edit_lock_ = true
+
+[node name="buutons" type="Control" parent="." unique_id=213699344]
+anchors_preset = 0
+offset_left = 49.0
+offset_top = 257.0
+offset_right = 89.0
+offset_bottom = 297.0
+
+[node name="Hbox" type="HBoxContainer" parent="buutons" unique_id=1170914402]
+layout_mode = 0
+offset_right = 139.0
+offset_bottom = 53.0
+
+[node name="Vbox" type="VBoxContainer" parent="buutons/Hbox" unique_id=1460989659]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="start" type="Button" parent="buutons/Hbox/Vbox" unique_id=1392700065]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_o6k8f")
+text = "Start"
+
+[node name="Espace1" type="HSeparator" parent="buutons/Hbox/Vbox" unique_id=1069894604]
+layout_mode = 2
+theme = ExtResource("2_o6k8f")
+
+[node name="Config" type="Button" parent="buutons/Hbox/Vbox" unique_id=233980514]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_o6k8f")
+text = "Config"
+
+[node name="Espace2" type="HSeparator" parent="buutons/Hbox/Vbox" unique_id=1905259925]
+layout_mode = 2
+theme = ExtResource("2_o6k8f")
+
+[node name="Exit" type="Button" parent="buutons/Hbox/Vbox" unique_id=1855639957]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_o6k8f")
+text = "Exit"
+
+[node name="title" type="Label" parent="." unique_id=1746153067]
+layout_mode = 0
+offset_left = 573.0
+offset_top = 62.0
+offset_right = 1123.0
+offset_bottom = 122.0
+text = ">_ Command's Terminal "
+label_settings = SubResource("LabelSettings_o6k8f")
+metadata/_edit_lock_ = true
+
+[node name="anim" type="AnimationPlayer" parent="." unique_id=1311365428]
+libraries/ = SubResource("AnimationLibrary_i4rym")
+autoplay = &"titulo"
+
+[node name="terminal" type="Control" parent="." unique_id=317507362]
+anchors_preset = 0
+offset_left = 576.0
+offset_top = 177.0
+offset_right = 1088.0
+offset_bottom = 518.0
+metadata/_edit_lock_ = true
+
+[node name="bg" type="ColorRect" parent="terminal" unique_id=1639120383]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -14.0
+offset_right = 4.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8734357, 0.8848201, 0.8847874, 1)
+metadata/_edit_lock_ = true
+
+[node name="fundo_terminal" type="ColorRect" parent="terminal" unique_id=381187386]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07444819, 0.08296732, 0.082090534, 1)
+metadata/_edit_lock_ = true
+
+[node name="input" type="LineEdit" parent="terminal" unique_id=1509766721]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+placeholder_text = ">_"
+keep_editing_on_text_submit = true
+emoji_menu_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="historic" type="RichTextLabel" parent="terminal" unique_id=914952557]
+layout_mode = 0
+offset_right = 511.0
+offset_bottom = 309.0
+theme = ExtResource("4_h7nv8")
+metadata/_edit_lock_ = true
+
+[node name="button_ligth_rigth" type="Control" parent="terminal" unique_id=1283443424]
+anchors_preset = 0
+offset_left = -4.0
+offset_top = -14.0
+offset_right = 212.0
+
+[node name="red" type="Button" parent="terminal/button_ligth_rigth" unique_id=194978403]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 14.0
+offset_bottom = 12.0
+theme = ExtResource("4_i4rym")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h7nv8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vf22r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s8d5m")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0s737")
+metadata/_edit_lock_ = true
+
+[node name="yellow" type="Button" parent="terminal/button_ligth_rigth" unique_id=2049832775]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 2.0
+offset_right = 28.0
+offset_bottom = 12.0
+theme = ExtResource("4_i4rym")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx0dg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xfgw4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jsiph")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ein6t")
+metadata/_edit_lock_ = true
+
+[node name="gream" type="Button" parent="terminal/button_ligth_rigth" unique_id=1464081731]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 2.0
+offset_right = 42.0
+offset_bottom = 12.0
+theme = ExtResource("4_i4rym")
+theme_override_styles/normal = SubResource("StyleBoxFlat_00rp1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1fjih")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dtnif")
+theme_override_styles/focus = SubResource("StyleBoxFlat_7y4kd")
+metadata/_edit_lock_ = true
+
+[connection signal="button_down" from="buutons/Hbox/Vbox/start" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="buutons/Hbox/Vbox/Config" to="." method="_on_config_button_down"]
+[connection signal="button_down" from="buutons/Hbox/Vbox/Exit" to="." method="_on_exit_button_down"]
+[connection signal="text_submitted" from="terminal/input" to="." method="_on_input_text_submitted"]
+[connection signal="button_down" from="terminal/button_ligth_rigth/red" to="." method="_on_exit_button_down"]
+[connection signal="button_down" from="terminal/button_ligth_rigth/yellow" to="." method="_on_config_button_down"]
+[connection signal="button_down" from="terminal/button_ligth_rigth/gream" to="." method="_on_start_button_down"]

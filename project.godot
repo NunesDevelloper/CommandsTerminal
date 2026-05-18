@@ -10,10 +10,13 @@ config_version=5
 
 [application]
 
-config/name="console"
+config/name="Command's Terminal "
+config/description="The Command's Terminal it's a game where you have to solve a problem using the terminal, typing commands to solve the problem."
 run/main_scene="uid://da0fhv20r3fhk"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/show_image=false
+boot_splash/stretch_mode=0
+config/icon="uid://cl7s0on2tw5mj"
 
 [autoload]
 
@@ -25,4 +28,5 @@ Global="*uid://cpvnqkvs6l11i"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

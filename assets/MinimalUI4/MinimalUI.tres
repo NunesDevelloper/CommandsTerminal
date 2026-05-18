@@ -1,16 +1,28 @@
-[gd_resource type="Theme" load_steps=54 format=3 uid="uid://b3kq74llqlv3x"]
+[gd_resource type="Theme" format=3 uid="uid://b3kq74llqlv3x"]
 
-[ext_resource type="FontFile" uid="uid://eefaihwdvqe5" path="OpenSans-Regular.ttf" id="1"]
-[ext_resource type="Texture2D" uid="uid://bw0fnwbne12bo" path="icons.svg" id="2"]
+[ext_resource type="FontFile" uid="uid://c1le0k25u42gr" path="res://assets/MinimalUI4/OpenSans-Regular.ttf" id="1"]
+[ext_resource type="Texture2D" uid="uid://bof48wxhhousx" path="res://assets/MinimalUI4/icons.svg" id="2"]
 
-[sub_resource type="FontFile" id="21"]
-fallbacks = Array[Font]([ExtResource("1")])
+[sub_resource type="FontFile" id="FontFile_i2sja"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/14/0/ascent = 0.0
+cache/0/14/0/descent = 0.0
+cache/0/14/0/underline_position = 0.0
+cache/0/14/0/underline_thickness = 0.0
+cache/0/14/0/scale = 1.0
 
 [sub_resource type="StyleBoxFlat" id="1"]
 bg_color = Color(0, 0, 0, 1)
@@ -42,23 +54,83 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(1, 1, 1, 1)
 
+[sub_resource type="FontFile" id="21"]
+fallbacks = Array[Font]([ExtResource("1")])
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/14/0/ascent = 0.0
+cache/0/14/0/descent = 0.0
+cache/0/14/0/underline_position = 0.0
+cache/0/14/0/underline_thickness = 0.0
+cache/0/14/0/scale = 1.0
+
 [sub_resource type="AtlasTexture" id="22"]
 atlas = ExtResource("2")
 region = Rect2(37, 111, 18, 18)
+
+[sub_resource type="DPITexture" id="DPITexture_2err7"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".37\" rx=\"2.333\"/><path fill=\"#1a1a1a\" fill-opacity=\".5\" d=\"m11.5 3.75-5.6 5.6-1.7-1.7-1.5 1.5 3.2 3.2 7.1-7.1z\"/></svg>
+"
 
 [sub_resource type="AtlasTexture" id="23"]
 atlas = ExtResource("2")
 region = Rect2(85, 111, 18, 18)
 
+[sub_resource type="DPITexture" id="DPITexture_gepxs"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fff\" fill-opacity=\".37\"/><circle cx=\"8\" cy=\"8\" r=\"4\" fill=\"#1a1a1a\" fill-opacity=\".5\"/></svg>
+"
+
 [sub_resource type="AtlasTexture" id="24"]
 atlas = ExtResource("2")
 region = Rect2(61, 111, 18, 18)
+
+[sub_resource type="DPITexture" id="DPITexture_4cmg3"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#1a1a1a\" fill-opacity=\".25\"/></svg>
+"
 
 [sub_resource type="AtlasTexture" id="25"]
 atlas = ExtResource("2")
 region = Rect2(13, 111, 18, 18)
 
+[sub_resource type="DPITexture" id="DPITexture_uqwtk"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#1a1a1a\" fill-opacity=\".25\" rx=\"2.333\"/></svg>
+"
+
 [sub_resource type="StyleBoxEmpty" id="26"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rll5l"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
 
 [sub_resource type="AtlasTexture" id="7"]
 atlas = ExtResource("2")
@@ -357,26 +429,37 @@ Button/colors/font_disabled_color = Color(0.9, 0.9, 0.9, 0.2)
 Button/colors/font_hover_color = Color(0.94, 0.94, 0.94, 1)
 Button/colors/font_pressed_color = Color(1, 1, 1, 1)
 Button/constants/h_separation = 2
-Button/fonts/font = SubResource("21")
+Button/fonts/font = SubResource("FontFile_i2sja")
 Button/styles/disabled = SubResource("1")
 Button/styles/focus = SubResource("2")
 Button/styles/hover = SubResource("3")
 Button/styles/normal = SubResource("1")
 Button/styles/pressed = SubResource("4")
+CheckBox/colors/checkbox_checked_color = Color(1, 1, 1, 1)
+CheckBox/colors/checkbox_unchecked_color = Color(1, 1, 1, 1)
 CheckBox/colors/font_color = Color(0.88, 0.88, 0.88, 1)
 CheckBox/colors/font_disabled_color = Color(0.9, 0.9, 0.9, 0.2)
+CheckBox/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
 CheckBox/colors/font_hover_color = Color(0.94, 0.94, 0.94, 1)
 CheckBox/colors/font_hover_color_pressed = Color(1, 1, 1, 1)
+CheckBox/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+CheckBox/colors/font_outline_color = Color(0, 0, 0, 1)
 CheckBox/colors/font_pressed_color = Color(1, 1, 1, 1)
 CheckBox/constants/check_v_offset = 0
 CheckBox/constants/h_separation = 4
+CheckBox/constants/outline_size = 0
+CheckBox/font_sizes/font_size = 16
 CheckBox/fonts/font = SubResource("21")
 CheckBox/icons/checked = SubResource("22")
+CheckBox/icons/checked_disabled = SubResource("DPITexture_2err7")
 CheckBox/icons/radio_checked = SubResource("23")
+CheckBox/icons/radio_checked_disabled = SubResource("DPITexture_gepxs")
 CheckBox/icons/radio_unchecked = SubResource("24")
+CheckBox/icons/radio_unchecked_disabled = SubResource("DPITexture_4cmg3")
 CheckBox/icons/unchecked = SubResource("25")
+CheckBox/icons/unchecked_disabled = SubResource("DPITexture_uqwtk")
 CheckBox/styles/disabled = SubResource("26")
-CheckBox/styles/focus = null
+CheckBox/styles/focus = SubResource("StyleBoxFlat_rll5l")
 CheckBox/styles/hover = SubResource("26")
 CheckBox/styles/hover_pressed = SubResource("26")
 CheckBox/styles/normal = SubResource("26")

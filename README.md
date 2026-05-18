@@ -36,4 +36,3 @@ Is this an educational game?
 - _decterminal : **[Dec Terminal Modern]:** Created by [Dan Mecklenburg Jr].The license was not found. Note: this source was taken from [dafont.com](https://www.dafont.com/pt/dec-terminal-modern.font)
 
 - ### If any information regarding art/source/music credits is incorrect or does not authorize its use in this project, please have the creators contact us. 
-
