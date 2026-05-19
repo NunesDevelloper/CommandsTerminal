@@ -3,11 +3,19 @@ extends Control
 @onready var historic: RichTextLabel = $terminal/historic
 @onready var input: LineEdit = $terminal/input
 
+@export_category("cenas")
+@export var config_scenes: String
+@export var selector_scenes: String 
+
+func _reday():
+	Global.is_url_scnes_old = self.scene_file_path
+
 func _on_start_button_down() -> void:
 	historic.append_text("start\n")
 
 func _on_config_button_down() -> void:
-	historic.append_text("config\n")
+	print(Global.is_url_scnes_old)
+	get_tree().change_scene_to_file(config_scenes)
 
 func _on_exit_button_down() -> void:
 	get_tree().quit()

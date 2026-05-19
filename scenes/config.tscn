@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ch6sx3yfvkii7"]
 
 [ext_resource type="Script" uid="uid://doa1jhnlu6dfx" path="res://scripts/config.gd" id="1_duhc1"]
+[ext_resource type="PackedScene" uid="uid://dokfkl3bfhnl7" path="res://scenes/bg.tscn" id="2_0d2gn"]
+[ext_resource type="PackedScene" uid="uid://byap7sgad76mp" path="res://scenes/button_ligth_rigth.tscn" id="2_vvbjn"]
 
 [node name="config" type="Control" unique_id=18936617]
 layout_mode = 3
@@ -10,3 +12,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_duhc1")
+
+[node name="bg" parent="." unique_id=726581790 instance=ExtResource("2_0d2gn")]
+layout_mode = 1
+
+[node name="button_ligth_rigth" parent="." unique_id=94058304 instance=ExtResource("2_vvbjn")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 216.0
+offset_bottom = 14.0

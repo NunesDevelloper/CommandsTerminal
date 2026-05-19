@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://da24e78xdxl32" path="res://scripts/title_scream.gd" id="1_fnt1t"]
 [ext_resource type="FontFile" uid="uid://dkb3iscy5xrn7" path="res://assets/fontes/_decterm.ttf" id="2_m5ta4"]
 [ext_resource type="Theme" uid="uid://cqg8lipwmj6k7" path="res://themes/title_scream_butoons.tres" id="2_o6k8f"]
+[ext_resource type="PackedScene" uid="uid://dokfkl3bfhnl7" path="res://scenes/bg.tscn" id="2_s8d5m"]
 [ext_resource type="Theme" uid="uid://ct5p3qxoaqymf" path="res://themes/terminal.tres" id="4_h7nv8"]
 [ext_resource type="Theme" uid="uid://dq0mgarwuc0r1" path="res://themes/button_right_base.tres" id="4_i4rym"]
+[ext_resource type="PackedScene" uid="uid://byap7sgad76mp" path="res://scenes/button_ligth_rigth.tscn" id="6_vf22r"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o6k8f"]
 font = ExtResource("2_m5ta4")
@@ -141,40 +143,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fnt1t")
+config_scenes = "res://scenes/config.tscn"
 metadata/_edit_lock_ = true
 
-[node name="bg" type="Control" parent="." unique_id=929563802]
+[node name="bg" parent="." unique_id=726581790 instance=ExtResource("2_s8d5m")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_lock_ = true
-
-[node name="bg_borda" type="ColorRect" parent="bg" unique_id=1593497332]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.98234254, 0.9823423, 0.9823424, 1)
-metadata/_edit_lock_ = true
-
-[node name="bg_main" type="ColorRect" parent="bg" unique_id=861352483]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 16.0
-offset_top = 22.0
-offset_right = -7.0
-offset_bottom = -5.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.4627451, 0.4627451, 0.4627451, 1)
-metadata/_edit_lock_ = true
 
 [node name="buutons" type="Control" parent="." unique_id=213699344]
 anchors_preset = 0
@@ -285,13 +258,13 @@ offset_bottom = 309.0
 theme = ExtResource("4_h7nv8")
 metadata/_edit_lock_ = true
 
-[node name="button_ligth_rigth" type="Control" parent="terminal" unique_id=1283443424]
+[node name="button_ligth_termianlminal" type="Control" parent="terminal" unique_id=1283443424]
 anchors_preset = 0
 offset_left = -4.0
 offset_top = -14.0
 offset_right = 212.0
 
-[node name="red" type="Button" parent="terminal/button_ligth_rigth" unique_id=194978403]
+[node name="red" type="Button" parent="terminal/button_ligth_termianlminal" unique_id=194978403]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 2.0
@@ -304,7 +277,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_s8d5m")
 theme_override_styles/focus = SubResource("StyleBoxFlat_0s737")
 metadata/_edit_lock_ = true
 
-[node name="yellow" type="Button" parent="terminal/button_ligth_rigth" unique_id=2049832775]
+[node name="yellow" type="Button" parent="terminal/button_ligth_termianlminal" unique_id=2049832775]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 2.0
@@ -317,7 +290,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_jsiph")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ein6t")
 metadata/_edit_lock_ = true
 
-[node name="gream" type="Button" parent="terminal/button_ligth_rigth" unique_id=1464081731]
+[node name="gream" type="Button" parent="terminal/button_ligth_termianlminal" unique_id=1464081731]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 2.0
@@ -330,10 +303,18 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_dtnif")
 theme_override_styles/focus = SubResource("StyleBoxFlat_7y4kd")
 metadata/_edit_lock_ = true
 
+[node name="button_ligth_rigth" parent="." unique_id=94058304 instance=ExtResource("6_vf22r")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 216.0
+offset_bottom = 14.0
+yellow_scens_chanes = "res://scenes/config.tscn"
+
 [connection signal="button_down" from="buutons/Hbox/Vbox/start" to="." method="_on_start_button_down"]
 [connection signal="button_down" from="buutons/Hbox/Vbox/Config" to="." method="_on_config_button_down"]
 [connection signal="button_down" from="buutons/Hbox/Vbox/Exit" to="." method="_on_exit_button_down"]
 [connection signal="text_submitted" from="terminal/input" to="." method="_on_input_text_submitted"]
-[connection signal="button_down" from="terminal/button_ligth_rigth/red" to="." method="_on_exit_button_down"]
-[connection signal="button_down" from="terminal/button_ligth_rigth/yellow" to="." method="_on_config_button_down"]
-[connection signal="button_down" from="terminal/button_ligth_rigth/gream" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="terminal/button_ligth_termianlminal/red" to="." method="_on_exit_button_down"]
+[connection signal="button_down" from="terminal/button_ligth_termianlminal/yellow" to="." method="_on_config_button_down"]
+[connection signal="button_down" from="terminal/button_ligth_termianlminal/gream" to="." method="_on_start_button_down"]

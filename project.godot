@@ -21,6 +21,16 @@ config/icon="uid://cl7s0on2tw5mj"
 [autoload]
 
 Global="*uid://cpvnqkvs6l11i"
+Pause="*uid://1a2k4tp5qpyl"
+
+[display]
+
+window/size/resizable=false
+window/size/borderless=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godotsteam/plugin.cfg")
 
 [physics]
 
@@ -30,3 +40,10 @@ Global="*uid://cpvnqkvs6l11i"
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+
+[steam]
+
+initialization/app_id=0
+initialization/initialize_on_startup=false
+initialization/embed_callbacks=false
+multiplayer_peer/max_channels=4
