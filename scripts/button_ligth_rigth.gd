@@ -4,6 +4,14 @@ extends Control
 @export var yellow_scens_chanes: String
 @export var gream_scens_chanes: String
 
+@onready var gream: Button = $gream
+
+
+func _ready() -> void:
+	for i in get_tree().root.get_children():
+		if i.name == "config":
+			self.remove_child(gream)
+
 func _on_red_pressed() -> void: 
 	get_tree().quit()
 
