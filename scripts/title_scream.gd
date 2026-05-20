@@ -11,10 +11,9 @@ func _reday():
 	Global.is_url_scnes_old = self.scene_file_path
 
 func _on_start_button_down() -> void:
-	historic.append_text("start\n")
+	get_tree().change_scene_to_file(selector_scenes)
 
 func _on_config_button_down() -> void:
-	print(Global.is_url_scnes_old)
 	get_tree().change_scene_to_file(config_scenes)
 
 func _on_exit_button_down() -> void:
@@ -23,10 +22,12 @@ func _on_exit_button_down() -> void:
 #region terminal
 var commands = {
 	"clear": clear,
+	"cls":clear,
 	"exit": exit,
 	"start": start,
 	"config": config,
-	"echo": echo
+	"echo": echo,
+	"help":help,
 }
 
 func _on_input_text_submitted(new_text: String) -> void:
@@ -46,6 +47,16 @@ func _on_input_text_submitted(new_text: String) -> void:
 		commands[command_name].call(args)
 	else:
 		historic.append_text("[color=red] Unknown command. [/color]  \n")
+
+func help(_args: Array) -> void: 
+	historic.append_text("""
+	help ->  show this table; 
+	echo <str> -> print to terminal; 
+	clear, cls -> clean this terminal; 
+	start -> enters the stage selection screen; 
+	exit -> quit the game; 
+	config -> enters the settings screen; 
+	""")
 
 func clear(_args: Array) -> void: historic.clear()
 

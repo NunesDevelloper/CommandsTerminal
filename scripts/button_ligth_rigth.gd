@@ -15,7 +15,6 @@ func _on_yellow_pressed() -> void:
 		for i in get_tree().root.get_children():
 			if i.name == "config":
 				get_tree().change_scene_to_file(Global.is_url_scnes_old)
-				return
 		
 		print("yellow_scnes")
 

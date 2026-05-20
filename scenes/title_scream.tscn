@@ -256,6 +256,7 @@ layout_mode = 0
 offset_right = 511.0
 offset_bottom = 309.0
 theme = ExtResource("4_h7nv8")
+scroll_following = true
 metadata/_edit_lock_ = true
 
 [node name="button_ligth_termianlminal" type="Control" parent="terminal" unique_id=1283443424]
