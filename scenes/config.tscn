@@ -286,7 +286,7 @@ offset_left = 14.0
 offset_top = 134.0
 offset_right = 104.0
 offset_bottom = 157.0
-text = "fullscrean_mode"
+text = "fullscreen_mode"
 metadata/_edit_lock_ = true
 
 [node name="aplly" type="Button" parent="video" unique_id=1309868942]
@@ -301,7 +301,7 @@ offset_bottom = -42.0
 grow_vertical = 0
 theme = SubResource("Theme_o4f72")
 theme_override_font_sizes/font_size = 25
-text = "aplly"
+text = "apply"
 
 [node name="restart" type="Button" parent="video" unique_id=24918722]
 layout_mode = 1

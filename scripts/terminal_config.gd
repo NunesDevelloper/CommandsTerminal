@@ -14,12 +14,15 @@ func _ready() -> void:
 	yellow.connect("button_down", button_ligth_rigth._on_yellow_pressed)
 
 var commands = {
-	"clear": clear,
-	"cls":clear,
+	"clear": clear, "cls":clear,
 	"echo": echo,
 	"help":help,
 	"exit":exit,
-	"resoluction":resoluction
+	"resolution":resolution,
+	"fullscreen":fullscreen,
+	"reste":reste,
+	"apply":apply,
+	"show_config":show_config
 }
 
 func _on_input_text_submitted(new_text: String) -> void:
@@ -42,17 +45,30 @@ func _on_input_text_submitted(new_text: String) -> void:
 
 func exit(_args: Array): button_ligth_rigth._on_red_pressed()
 
+func reste(_args) -> void: config.reset()
+
+func apply(_args) -> void: config.apply()
+
+func clear(_args: Array) -> void: historic.clear()
+
 func help(_args: Array) -> void: 
 	historic.append_text("""
 	help ->  show this table; 
 	echo <str> -> print to terminal; 
 	clear, cls -> clean this terminal; 
-	start -> enters the stage selection screen; 
 	exit -> quit the game; 
-	config -> enters the settings screen; 
+	resolution <x:int,y:int> -> set screen resolution (x and y > 200); 
+	fullscreen <bool> -> enable/disable fullscreen (true/false); 
+	reste -> reset settings to defaults; 
+	apply -> apply current settings; 
+	show_config -> display current configuration; 
 	""")
 
-func clear(_args: Array) -> void: historic.clear()
+func show_config(_args: Array) -> void: 
+	historic.append_text("""
+	resolution : %s x %s
+	fullscreen : %s
+	""" % [Global.resolution.x, Global.resolution.y, Global.is_fuslcream])
 
 func echo(args: Array) -> void: 
 	if args.size() < 1:
@@ -63,21 +79,39 @@ func echo(args: Array) -> void:
 	
 	historic.append_text(str(text) + "\n")
 
-func resoluction(args: Array) -> void:
+func resolution(args: Array) -> void:
 	if args.size() < 1:
-		historic.append_text("[color=orange]Usage: resoluction <x:int,y:int>[/color] \n")
+		historic.append_text("[color=orange]Usage: resolution <x:int,y:int>[/color] \n")
 		return
 	
 	var resoluct = args[0].split(",")
 	
 	if not resoluct[0].is_valid_int() or not resoluct[1].is_valid_int() :
-		historic.append_text("[color=orange]Usage: x and y somente tipo int[/color] \n")
+		historic.append_text("[color=orange]Usage: x and y must be integers[/color] \n")
 		return
 		
 	if resoluct[0].to_int() <= 200 or resoluct[1].to_int() <= 200:
-		historic.append_text("[color=orange]Usage: x and y > 200[/color] \n")
+		historic.append_text("[color=orange]Usage: x and y must be > 200[/color] \n")
 		return
 	
-	config.resoluction = Vector3i(resoluct[0].to_int(), resoluct[1].to_int(), 15)
+	config.resolution = Vector3i(resoluct[0].to_int(), resoluct[1].to_int(), 15)
+
+func fullscreen(args: Array) -> void:
+	if args.size() < 1:
+		historic.append_text("fullscreen: " + str(Global.is_fuslcream) + "\n")
+		return
 	
+	var state = str(args[0])
 	
+	if state == "true": state = 1
+	elif state == "false": state = 0
+	
+	state = int(state)
+	
+	if not state in [1 ,0]: 
+		historic.append_text("[color=orange]Usage: fullscreen <bool>[/color] \n")
+		return
+		
+	Global.is_fuslcream = bool(state)
+	
+	print(Global.is_fuslcream )
