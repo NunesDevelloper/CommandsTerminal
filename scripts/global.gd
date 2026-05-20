@@ -4,7 +4,7 @@ extends Node
 var is_url_scnes_old := "res://scenes/title_scream.tscn"
 
 var is_fuslcream : bool = false
-var resoluction : Vector3i = Vector3i(1152, 648, 0)
+var resoluction : Vector3i = Vector3i(1152, 648, 15)
 
 func save_config(data_config: Dictionary) -> void:
 	var f = FileAccess.open("user://config.json", FileAccess.WRITE)

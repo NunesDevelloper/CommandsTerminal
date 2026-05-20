@@ -6,7 +6,6 @@ extends Control
 
 @onready var gream: Button = $gream
 
-
 func _ready() -> void:
 	for i in get_tree().root.get_children():
 		if i.name == "config":

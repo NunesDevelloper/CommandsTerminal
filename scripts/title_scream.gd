@@ -9,6 +9,7 @@ extends Control
 
 func _reday():
 	Global.is_url_scnes_old = self.scene_file_path
+	
 
 func _on_start_button_down() -> void:
 	get_tree().change_scene_to_file(selector_scenes)

@@ -1,0 +1,46 @@
+[gd_resource type="Theme" format=3 uid="uid://dbnvy74hefxra"]
+
+[ext_resource type="FontFile" uid="uid://c1le0k25u42gr" path="res://assets/MinimalUI4/OpenSans-Regular.ttf" id="1_3sjt4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3sjt4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yuhsh"]
+bg_color = Color(0, 1, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dfro2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8o1en"]
+bg_color = Color(0, 1, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71y41"]
+bg_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofjw2"]
+bg_color = Color(0, 1, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r4frp"]
+bg_color = Color(0, 1, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5w4x"]
+bg_color = Color(0, 1, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_olw6b"]
+bg_color = Color(0, 1, 0, 0)
+
+[resource]
+OptionButton/colors/font_color = Color(0, 1, 0, 1)
+OptionButton/colors/font_focus_color = Color(0, 1, 0, 1)
+OptionButton/colors/font_hover_color = Color(0, 1, 0, 1)
+OptionButton/colors/font_hover_pressed_color = Color(0, 1, 0, 1)
+OptionButton/colors/font_outline_color = Color(0, 1, 0, 1)
+OptionButton/font_sizes/font_size = 16
+OptionButton/fonts/font = ExtResource("1_3sjt4")
+OptionButton/styles/focus = SubResource("StyleBoxFlat_3sjt4")
+OptionButton/styles/hover = SubResource("StyleBoxFlat_yuhsh")
+OptionButton/styles/hover_mirrored = SubResource("StyleBoxFlat_dfro2")
+OptionButton/styles/hover_pressed = SubResource("StyleBoxFlat_8o1en")
+OptionButton/styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_71y41")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_ofjw2")
+OptionButton/styles/normal_mirrored = SubResource("StyleBoxFlat_r4frp")
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_s5w4x")
+OptionButton/styles/pressed_mirrored = SubResource("StyleBoxFlat_olw6b")

@@ -39,6 +39,6 @@ func reset() -> void:
 func _on_is_fullsecream_toggled(toggled_on: bool) -> void: is_fuslcream = toggled_on
 
 func _on_slect_resolution_item_selected(index: int) -> void:
-	var intem = slect_resolution.get_item_id(index)
-	intem = intem.name.split(" x ")
-	resoluction = Vector3i(intem[0], intem[1], index)
+	var intens: String = slect_resolution.get_item_text(index)
+	var parts: PackedStringArray = intens.split(" X ")
+	resoluction = Vector3i(parts[0].to_int(), parts[1].to_int(), index)
