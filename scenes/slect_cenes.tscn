@@ -1,0 +1,291 @@
+[gd_scene format=3 uid="uid://blucpc5yjeniv"]
+
+[ext_resource type="Script" uid="uid://d2q4qgw7gu4id" path="res://scripts/slect_cenes.gd" id="1_lbo08"]
+[ext_resource type="PackedScene" uid="uid://dokfkl3bfhnl7" path="res://scenes/bg.tscn" id="1_lrdpv"]
+[ext_resource type="PackedScene" uid="uid://byap7sgad76mp" path="res://scenes/button_ligth_rigth.tscn" id="2_wpig8"]
+[ext_resource type="FontFile" uid="uid://c1le0k25u42gr" path="res://assets/MinimalUI4/OpenSans-Regular.ttf" id="3_wpig8"]
+[ext_resource type="Script" uid="uid://iuxex1cs24kn" path="res://scripts/inicio.gd" id="4_pvy8a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i4rym"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7nv8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vf22r"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8d5m"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_0s737"]
+color = Color(0, 0, 0, 0)
+
+[sub_resource type="Theme" id="Theme_pvy8a"]
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 29
+Button/fonts/font = ExtResource("3_wpig8")
+Button/styles/focus = SubResource("StyleBoxFlat_i4rym")
+Button/styles/hover = SubResource("StyleBoxFlat_h7nv8")
+Button/styles/normal = SubResource("StyleBoxFlat_vf22r")
+Button/styles/pressed = SubResource("StyleBoxFlat_s8d5m")
+HSeparator/styles/separator = SubResource("StyleBoxLine_0s737")
+
+[sub_resource type="Gradient" id="Gradient_lbo08"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.37745094, 0.38235295)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0.56078434, 0.56078434, 0.56078434, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qx28f"]
+gradient = SubResource("Gradient_lbo08")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Theme" id="Theme_61n0s"]
+Button/colors/font_hover_color = Color(0, 0, 1, 1)
+Button/font_sizes/font_size = 29
+Button/fonts/font = ExtResource("3_wpig8")
+Button/styles/focus = SubResource("StyleBoxFlat_i4rym")
+Button/styles/hover = SubResource("StyleBoxFlat_h7nv8")
+Button/styles/normal = SubResource("StyleBoxFlat_vf22r")
+Button/styles/pressed = SubResource("StyleBoxFlat_s8d5m")
+HSeparator/styles/separator = SubResource("StyleBoxLine_0s737")
+
+[node name="slect_cenes" type="Control" unique_id=324059608]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lbo08")
+
+[node name="bg" parent="." unique_id=726581790 instance=ExtResource("1_lrdpv")]
+layout_mode = 1
+
+[node name="button_ligth_rigth" parent="." unique_id=94058304 instance=ExtResource("2_wpig8")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 216.0
+offset_bottom = 14.0
+yellow_scens_chanes = "res://scenes/config.tscn"
+gream_scens_chanes = "res://scenes/title_scream.tscn"
+
+[node name="buttons_selects" type="Control" parent="." unique_id=1657966292]
+anchors_preset = 0
+
+[node name="inicio" type="Button" parent="buttons_selects" unique_id=2087864724]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 292.0
+offset_right = 344.0
+offset_bottom = 341.0
+theme = SubResource("Theme_pvy8a")
+text = "the first commands"
+script = ExtResource("4_pvy8a")
+
+[node name="point" type="TextureRect" parent="buttons_selects/inicio" unique_id=499492127]
+layout_mode = 0
+offset_left = 270.0
+offset_top = -5.0
+offset_right = 334.0
+offset_bottom = 59.0
+texture = SubResource("GradientTexture2D_qx28f")
+
+[node name="win" type="Button" parent="buttons_selects" unique_id=801797741]
+visible = false
+layout_mode = 0
+offset_left = 465.0
+offset_top = 239.0
+offset_right = 602.0
+offset_bottom = 288.0
+theme = SubResource("Theme_pvy8a")
+text = "windowns"
+
+[node name="point" type="TextureRect" parent="buttons_selects/win" unique_id=1363846884]
+layout_mode = 0
+offset_left = 129.0
+offset_top = -6.0
+offset_right = 193.0
+offset_bottom = 58.0
+texture = SubResource("GradientTexture2D_qx28f")
+
+[node name="mac_os" type="Button" parent="buttons_selects" unique_id=432147448]
+visible = false
+layout_mode = 0
+offset_left = 490.0
+offset_top = 352.0
+offset_right = 586.0
+offset_bottom = 401.0
+theme = SubResource("Theme_pvy8a")
+text = "mac os"
+
+[node name="point" type="TextureRect" parent="buttons_selects/mac_os" unique_id=36906400]
+layout_mode = 0
+offset_left = 89.0
+offset_top = -6.0
+offset_right = 153.0
+offset_bottom = 58.0
+texture = SubResource("GradientTexture2D_qx28f")
+
+[node name="outhers" type="Button" parent="buttons_selects" unique_id=1150672110]
+visible = false
+layout_mode = 0
+offset_left = 394.0
+offset_top = 460.0
+offset_right = 685.0
+offset_bottom = 509.0
+theme = SubResource("Theme_pvy8a")
+text = "outhers"
+
+[node name="outros" type="Control" parent="buttons_selects/outhers" unique_id=1963205718]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="git" type="Button" parent="buttons_selects/outhers/outros" unique_id=1605612073]
+layout_mode = 0
+offset_left = 248.0
+offset_top = -28.0
+offset_right = 288.0
+offset_bottom = 12.0
+text = "git"
+
+[node name="point" type="TextureRect" parent="buttons_selects/outhers/outros/git" unique_id=495625506]
+layout_mode = 0
+offset_left = 29.0
+offset_top = -12.0
+offset_right = 93.0
+offset_bottom = 52.0
+texture = SubResource("GradientTexture2D_qx28f")
+
+[node name="docker" type="Button" parent="buttons_selects/outhers/outros" unique_id=808588772]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 41.0
+offset_right = 324.0
+offset_bottom = 81.0
+text = "docker"
+
+[node name="point" type="TextureRect" parent="buttons_selects/outhers/outros/docker" unique_id=1018513820]
+layout_mode = 0
+offset_left = 86.0
+offset_top = -12.0
+offset_right = 150.0
+offset_bottom = 52.0
+texture = SubResource("GradientTexture2D_qx28f")
+
+[node name="point" type="TextureRect" parent="buttons_selects/outhers" unique_id=358817541]
+layout_mode = 0
+offset_left = 191.0
+offset_top = -4.0
+offset_right = 255.0
+offset_bottom = 60.0
+texture = SubResource("GradientTexture2D_qx28f")
+
+[node name="linux" type="Button" parent="buttons_selects" unique_id=2043084850]
+visible = false
+layout_mode = 0
+offset_left = 490.0
+offset_top = 99.0
+offset_right = 585.0
+offset_bottom = 148.0
+theme = SubResource("Theme_pvy8a")
+text = "linux"
+
+[node name="point" type="TextureRect" parent="buttons_selects/linux" unique_id=629421639]
+layout_mode = 0
+offset_left = 74.0
+offset_top = -6.0
+offset_right = 138.0
+offset_bottom = 58.0
+texture = SubResource("GradientTexture2D_qx28f")
+
+[node name="distribuis" type="Control" parent="buttons_selects/linux" unique_id=1525572731]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="arch" type="Button" parent="buttons_selects/linux/distribuis" unique_id=976859350]
+layout_mode = 0
+offset_left = 136.0
+offset_top = -40.0
+offset_right = 231.0
+offset_bottom = 9.0
+theme = SubResource("Theme_pvy8a")
+text = "arch"
+
+[node name="point" type="TextureRect" parent="buttons_selects/linux/distribuis/arch" unique_id=580920315]
+layout_mode = 0
+offset_left = 68.0
+offset_top = -8.0
+offset_right = 132.0
+offset_bottom = 56.0
+texture = SubResource("GradientTexture2D_qx28f")
+
+[node name="ubuntu" type="Button" parent="buttons_selects/linux/distribuis" unique_id=140367944]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 32.0
+offset_right = 232.0
+offset_bottom = 81.0
+theme = SubResource("Theme_pvy8a")
+text = "ubuntu"
+
+[node name="point" type="TextureRect" parent="buttons_selects/linux/distribuis/ubuntu" unique_id=1483460048]
+layout_mode = 0
+offset_left = 90.0
+offset_top = -6.0
+offset_right = 154.0
+offset_bottom = 58.0
+texture = SubResource("GradientTexture2D_qx28f")
+
+[node name="play" type="Button" parent="." unique_id=413305341]
+layout_mode = 0
+offset_left = 857.0
+offset_top = 582.0
+offset_right = 943.0
+offset_bottom = 631.0
+theme = SubResource("Theme_pvy8a")
+text = "play"
+
+[node name="reste" type="Button" parent="." unique_id=1504830489]
+layout_mode = 0
+offset_left = 1059.0
+offset_top = 582.0
+offset_right = 1145.0
+offset_bottom = 631.0
+theme = SubResource("Theme_pvy8a")
+text = "reset"
+
+[node name="reste_all" type="Button" parent="." unique_id=506644752]
+layout_mode = 0
+offset_left = 946.0
+offset_top = 582.0
+offset_right = 1058.0
+offset_bottom = 631.0
+theme = SubResource("Theme_pvy8a")
+text = "reset all"
+
+[node name="info" type="TextureRect" parent="." unique_id=265002953]
+layout_mode = 0
+offset_left = 1075.0
+offset_top = 30.0
+offset_right = 1139.0
+offset_bottom = 94.0
+texture = SubResource("GradientTexture2D_qx28f")
+
+[node name="info_button" type="Button" parent="info" unique_id=1688594665]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_61n0s")
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "!"

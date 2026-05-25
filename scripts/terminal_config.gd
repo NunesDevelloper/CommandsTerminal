@@ -105,6 +105,9 @@ func fullscreen(args: Array) -> void:
 	
 	if state == "true": state = 1
 	elif state == "false": state = 0
+	elif not state.is_valid_int(): 
+		historic.append_text("[color=orange]Usage: fullscreen <bool>[/color] \n")
+		return
 	
 	state = int(state)
 	
@@ -114,4 +117,3 @@ func fullscreen(args: Array) -> void:
 		
 	Global.is_fuslcream = bool(state)
 	
-	print(Global.is_fuslcream )
