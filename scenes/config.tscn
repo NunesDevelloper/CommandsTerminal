@@ -177,16 +177,15 @@ offset_bottom = 14.0
 
 [node name="gream_config" type="Button" parent="button_ligth_rigth" unique_id=1716766493]
 layout_mode = 0
-offset_left = 32.0
+offset_left = 47.0
 offset_top = 2.0
-offset_right = 42.0
-offset_bottom = 12.0
+offset_right = 63.0
+offset_bottom = 18.0
 theme = ExtResource("4_14yi8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_fu4ru")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_iptxn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_o4f72")
 theme_override_styles/focus = SubResource("StyleBoxFlat_y6n8j")
-metadata/_edit_lock_ = true
 
 [node name="video" type="Control" parent="." unique_id=1522595876]
 anchors_preset = 0
@@ -417,10 +416,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_jsiph")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ein6t")
 metadata/_edit_lock_ = true
 
-[connection signal="button_down" from="button_ligth_rigth/gream_config" to="." method="apply"]
 [connection signal="item_selected" from="video/slect_resolution" to="." method="_on_slect_resolution_item_selected"]
 [connection signal="toggled" from="video/is_fullsecream" to="." method="_on_is_fullsecream_toggled"]
-[connection signal="button_down" from="video/aplly" to="." method="apply"]
-[connection signal="button_down" from="video/restart" to="." method="reset"]
 [connection signal="text_submitted" from="terminal/input" to="terminal" method="_on_input_text_submitted"]
-[connection signal="button_down" from="terminal/button_ligth_termianlminal/gream_terminal" to="." method="apply"]

@@ -1,17 +1,12 @@
 [gd_scene format=3 uid="uid://da0fhv20r3fhk"]
 
 [ext_resource type="Script" uid="uid://da24e78xdxl32" path="res://scripts/title_scream.gd" id="1_fnt1t"]
-[ext_resource type="FontFile" uid="uid://dkb3iscy5xrn7" path="res://assets/fontes/_decterm.ttf" id="2_m5ta4"]
 [ext_resource type="Theme" uid="uid://cqg8lipwmj6k7" path="res://themes/title_scream_butoons.tres" id="2_o6k8f"]
 [ext_resource type="PackedScene" uid="uid://dokfkl3bfhnl7" path="res://scenes/bg.tscn" id="2_s8d5m"]
 [ext_resource type="Theme" uid="uid://ct5p3qxoaqymf" path="res://themes/terminal.tres" id="4_h7nv8"]
 [ext_resource type="Theme" uid="uid://dq0mgarwuc0r1" path="res://themes/button_right_base.tres" id="4_i4rym"]
+[ext_resource type="LabelSettings" uid="uid://58yxhjfqkqvn" path="res://themes/label_title.tres" id="4_s8d5m"]
 [ext_resource type="PackedScene" uid="uid://byap7sgad76mp" path="res://scenes/button_ligth_rigth.tscn" id="6_vf22r"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_o6k8f"]
-font = ExtResource("2_m5ta4")
-font_size = 60
-font_color = Color(0, 1, 0, 1)
 
 [sub_resource type="Animation" id="Animation_m5ta4"]
 length = 0.001
@@ -199,7 +194,7 @@ offset_top = 62.0
 offset_right = 1123.0
 offset_bottom = 122.0
 text = ">_ Command's Terminal "
-label_settings = SubResource("LabelSettings_o6k8f")
+label_settings = ExtResource("4_s8d5m")
 metadata/_edit_lock_ = true
 
 [node name="anim" type="AnimationPlayer" parent="." unique_id=1311365428]

@@ -1,5 +1,12 @@
 [gd_scene format=3 uid="uid://dokfkl3bfhnl7"]
 
+[ext_resource type="Script" uid="uid://bkiar2crf3gjv" path="res://scripts/bg.gd" id="1_anprf"]
+[ext_resource type="Theme" uid="uid://cqg8lipwmj6k7" path="res://themes/title_scream_butoons.tres" id="2_dpp0m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dpp0m"]
+font_size = 21
+font_color = Color(0, 1, 0, 1)
+
 [node name="bg" type="Control" unique_id=726581790]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_anprf")
 metadata/_edit_lock_ = true
 
 [node name="bg_borda" type="ColorRect" parent="." unique_id=682954553]
@@ -32,3 +40,27 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.4627451, 0.4627451, 0.4627451, 1)
 metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="." unique_id=2028846597]
+anchors_preset = 0
+offset_left = 32.0
+offset_right = 1128.0
+offset_bottom = 22.0
+
+[node name="name" type="Label" parent="Control" unique_id=1081745391]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -11.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_dpp0m")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "testP_§"
+label_settings = SubResource("LabelSettings_dpp0m")
+horizontal_alignment = 1
+vertical_alignment = 1
+max_lines_visible = 1

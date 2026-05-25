@@ -3,6 +3,10 @@ extends Control
 @onready var button_ligth_rigth: Control = $"../button_ligth_rigth"
 @onready var red: Button = $button_ligth_termianlminal/red
 @onready var yellow: Button = $button_ligth_termianlminal/yellow
+@onready var aplly: Button = $"../video/aplly"
+@onready var restart: Button = $"../video/restart"
+@onready var gream_terminal: Button = $button_ligth_termianlminal/gream_terminal
+@onready var gream_config: Button = $"../button_ligth_rigth/gream_config"
 @onready var input: LineEdit = $input
 @onready var historic: RichTextLabel = $historic
 @onready var slect_resolution: OptionButton = $"../video/slect_resolution"
@@ -12,7 +16,11 @@ extends Control
 func _ready() -> void:
 	red.connect("button_down", button_ligth_rigth._on_red_pressed)
 	yellow.connect("button_down", button_ligth_rigth._on_yellow_pressed)
-
+	aplly.connect("button_down", _on_input_text_submitted.bind("apply"))
+	gream_terminal.connect("button_down", _on_input_text_submitted.bind("apply"))
+	gream_config.connect("button_down", _on_input_text_submitted.bind("apply"))
+	restart.connect("button_down",_on_input_text_submitted.bind("reste"))
+	
 var commands = {
 	"clear": clear, "cls":clear,
 	"echo": echo,
@@ -22,7 +30,8 @@ var commands = {
 	"fullscreen":fullscreen,
 	"reste":reste,
 	"apply":apply,
-	"show_config":show_config
+	"show_config":show_config,
+	"back": back
 }
 
 func _on_input_text_submitted(new_text: String) -> void:
@@ -47,6 +56,8 @@ func exit(_args: Array): button_ligth_rigth._on_red_pressed()
 
 func reste(_args) -> void: config.reset()
 
+func back(_args) -> void: button_ligth_rigth._on_yellow_pressed()
+
 func apply(_args) -> void: config.apply()
 
 func clear(_args: Array) -> void: historic.clear()
@@ -62,6 +73,7 @@ func help(_args: Array) -> void:
 	reste -> reset settings to defaults; 
 	apply -> apply current settings; 
 	show_config -> display current configuration; 
+	back -> Return to the home screen;
 	""")
 
 func show_config(_args: Array) -> void: 
@@ -116,4 +128,3 @@ func fullscreen(args: Array) -> void:
 		return
 		
 	Global.is_fuslcream = bool(state)
-	

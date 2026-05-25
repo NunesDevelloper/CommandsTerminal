@@ -7,9 +7,8 @@ extends Control
 @export var config_scenes: String
 @export var selector_scenes: String 
 
-func _reday():
+func  _process(_delta: float) -> void:
 	Global.is_url_scnes_old = self.scene_file_path
-	
 
 func _on_start_button_down() -> void:
 	get_tree().change_scene_to_file(selector_scenes)

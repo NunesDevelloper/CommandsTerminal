@@ -5,9 +5,10 @@ extends Button
 var is_select := false
 
 func _ready() -> void:
-	connect("button_down", a)
+	
+	connect("button_down", _button_dow)
 
-func a() -> void:
+func _button_dow() -> void:
 	if is_select == true:
 		self.add_theme_color_override("font_color", "#ffffff") 
 		is_select = false

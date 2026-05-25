@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://58yxhjfqkqvn"]
+
+[ext_resource type="FontFile" uid="uid://dkb3iscy5xrn7" path="res://assets/fontes/_decterm.ttf" id="1_hfu1l"]
+
+[resource]
+font = ExtResource("1_hfu1l")
+font_size = 60
+font_color = Color(0, 1, 0, 1)

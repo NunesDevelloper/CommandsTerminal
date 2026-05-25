@@ -92,48 +92,45 @@ layout_mode = 3
 anchors_preset = 0
 offset_left = 17.0
 offset_top = 6.0
-offset_right = 233.0
-offset_bottom = 20.0
+offset_right = 234.0
+offset_bottom = 32.0
 script = ExtResource("1_23bcn")
 
 [node name="red" type="Button" parent="." unique_id=514881955]
 layout_mode = 0
-offset_left = 4.0
+offset_left = 6.0
 offset_top = 2.0
-offset_right = 14.0
-offset_bottom = 12.0
+offset_right = 22.0
+offset_bottom = 18.0
 theme = ExtResource("2_8prho")
 theme_override_styles/normal = SubResource("StyleBoxFlat_h7nv8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vf22r")
 theme_override_styles/hover = SubResource("StyleBoxFlat_s8d5m")
 theme_override_styles/focus = SubResource("StyleBoxFlat_0s737")
-metadata/_edit_lock_ = true
 
 [node name="yellow" type="Button" parent="." unique_id=1035015045]
 layout_mode = 0
-offset_left = 18.0
+offset_left = 27.0
 offset_top = 2.0
-offset_right = 28.0
-offset_bottom = 12.0
+offset_right = 43.0
+offset_bottom = 18.0
 theme = ExtResource("2_8prho")
 theme_override_styles/normal = SubResource("StyleBoxFlat_mx0dg")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xfgw4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jsiph")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ein6t")
-metadata/_edit_lock_ = true
 
 [node name="gream" type="Button" parent="." unique_id=1641898208]
 layout_mode = 0
-offset_left = 32.0
+offset_left = 47.0
 offset_top = 2.0
-offset_right = 42.0
-offset_bottom = 12.0
+offset_right = 63.0
+offset_bottom = 18.0
 theme = ExtResource("2_8prho")
 theme_override_styles/normal = SubResource("StyleBoxFlat_00rp1")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1fjih")
 theme_override_styles/hover = SubResource("StyleBoxFlat_dtnif")
 theme_override_styles/focus = SubResource("StyleBoxFlat_7y4kd")
-metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="red" to="." method="_on_red_pressed"]
 [connection signal="pressed" from="yellow" to="." method="_on_yellow_pressed"]
